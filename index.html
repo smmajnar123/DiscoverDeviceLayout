@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">My Devices</div>
+
+    <div class="nav-right">
+      <div class="nav-profile">
+        <div class="profile-icon">👤</div>
+        <span class="profile-name">Sachin</span>
+      </div>
+      <div class="hamburger" onclick="openDrawer()">☰</div>
+    </div>
+  </div>
+
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="deviceList"></div>
+
+    <!-- Drawer (Mobile) -->
+    <div class="drawer" id="drawer">
+      <div id="deviceListMobile"></div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div id="treeContainer"></div>
+      <div id="splitter"></div>
+      <div id="tableContainer"></div>
+      <div id="rowModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">×</span>
+          <h3 id="modalTitle"></h3>
+          <table id="modalTable">
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2026 Device Dashboard</p>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
